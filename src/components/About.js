@@ -15,12 +15,14 @@ export default function About() {
                 color: 'white',
                 backgroundColor: 'black'
             })
+            setBtnText('Enable Light Mode');
         }
         else {
             setMyStyle({
                 color: 'black',
                 backgroundColor: 'white'
             })
+            setBtnText('Wnable Dark Mode');
         }
     }
 
@@ -68,7 +70,7 @@ export default function About() {
             </div>
 
             <div className="container my-3">
-                <button onClick={toggleStyle} type="button" className="btn btn-primary">Enable Dark Mode</button>
+                <button onClick={toggleStyle} type="button" className="btn btn-primary">{btnText}</button>
             </div>
 
         </div>
