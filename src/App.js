@@ -6,7 +6,6 @@ import React, { useState } from 'react';
 import Alert from './components/Alert';
 import {
   BrowserRouter as Router,
-  Switch,
   Route
 } from "react-router-dom";
 
@@ -43,7 +42,7 @@ function App() {
     <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} key={new Date()} />
     <Alert alert={alert}/>
     <div className="container my-3">
-    <Switch>
+    <route>
     {/* /users --> Component 1
         /users/home --> Component 2 */}
           <Route exact path="/about">
@@ -52,7 +51,7 @@ function App() {
           <Route exact path="/">
             <TextForm showAlert={showAlert} heading="Try TextUtils - word counter, character counter, remove extra spaces" mode={mode}/>
           </Route>
-    </Switch>
+    </route>
     </div>
     </Router>
     </> 
